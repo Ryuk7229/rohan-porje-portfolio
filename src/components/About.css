@@ -1,0 +1,469 @@
+.about-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 8%;
+  background: #050505;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.about-label {
+  display: inline-block;
+  margin-bottom: 60px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 100px;
+  align-items: start;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.about-heading h2 {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+  font-size: clamp(45px, 6vw, 78px);
+  line-height: 0.95;
+  letter-spacing: -3px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.about-heading h2 span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================
+   TEXT CONTENT
+========================= */
+
+.about-content {
+  padding-top: 5px;
+}
+
+.about-intro {
+  margin: 0 0 25px;
+
+  max-width: 620px;
+
+  font-family: Arial, sans-serif;
+  font-size: 21px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.about-description {
+  margin: 0;
+
+  max-width: 600px;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.about-cta {
+  margin-top: 40px;
+}
+
+.about-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  transition: all 0.3s ease;
+}
+
+.about-cta-arrow {
+  font-size: 17px;
+  transition: transform 0.3s ease;
+}
+
+.about-cta-button:hover {
+  background: #fff;
+  color: #050505;
+  border-color: #fff;
+}
+
+.about-cta-button:hover .about-cta-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* =========================
+   STATS
+========================= */
+
+.about-stats {
+  display: flex;
+  gap: 50px;
+
+  margin-top: 55px;
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.stat strong {
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+
+  color: #ffffff;
+}
+
+.stat span {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* =========================
+   TECHNOLOGY MARQUEE
+========================= */
+
+.skills-wrapper {
+  margin-top: 110px;
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.skills-title {
+  margin-bottom: 28px;
+
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* =========================
+   MARQUEE
+========================= */
+
+.skills-marquee {
+  position: relative;
+
+  width: 100%;
+  overflow: hidden;
+
+  /*
+    Creates a soft fade at
+    both edges of the marquee.
+  */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+/* =========================
+   MOVING TRACK
+========================= */
+
+.skills-track {
+  display: flex;
+  align-items: center;
+
+  width: max-content;
+
+  gap: 70px;
+
+  animation: skills-scroll 25s linear infinite;
+
+  will-change: transform;
+}
+
+/* =========================
+   TECHNOLOGY ITEM
+========================= */
+
+.tech-item {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+
+  white-space: nowrap;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Technology icon */
+
+.tech-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+
+  color: currentColor;
+}
+
+/* Technology name */
+
+.tech-name {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  color: currentColor;
+}
+
+/* Hover */
+
+.tech-item:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   INFINITE SCROLL ANIMATION
+========================= */
+
+@keyframes skills-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause marquee on hover */
+
+.skills-marquee:hover .skills-track {
+  animation-play-state: paused;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 90px 6%;
+  }
+
+  .about-label {
+    margin-bottom: 45px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-heading h2 {
+    font-size: 55px;
+    letter-spacing: -2px;
+  }
+
+  .about-intro {
+    font-size: 18px;
+  }
+
+  .about-description {
+    font-size: 13px;
+  }
+
+  .about-stats {
+    gap: 30px;
+  }
+
+  .skills-wrapper {
+    margin-top: 80px;
+  }
+
+  .skills-track {
+    gap: 55px;
+  }
+
+  .tech-icon {
+    font-size: 30px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 75px 20px;
+  }
+
+  .about-label {
+    margin-bottom: 40px;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .about-grid {
+    gap: 35px;
+  }
+
+  .about-heading h2 {
+    font-size: 42px;
+    line-height: 0.98;
+    letter-spacing: -1.5px;
+  }
+
+  .about-intro {
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .about-description {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  /* Stats */
+
+  .about-stats {
+    gap: 20px;
+
+    justify-content: space-between;
+
+    margin-top: 40px;
+    padding-top: 25px;
+  }
+
+  .stat {
+    gap: 5px;
+  }
+
+  .stat strong {
+    font-size: 24px;
+  }
+
+  .stat span {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  /* Marquee */
+
+  .skills-wrapper {
+    margin-top: 65px;
+    padding-top: 25px;
+  }
+
+  .skills-title {
+    margin-bottom: 22px;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .skills-track {
+    gap: 40px;
+
+    animation-duration: 20s;
+  }
+
+  .tech-item {
+    gap: 9px;
+  }
+
+  .tech-icon {
+    font-size: 26px;
+  }
+
+  .tech-name {
+    font-size: 11px;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-track {
+    animation-play-state: paused;
+  }
+}
+
+.arrow-icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+}
+
+.arrow-icon svg {
+  width: 100%;
+  height: 100%;
+}

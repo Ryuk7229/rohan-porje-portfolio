@@ -1,0 +1,503 @@
+/* =========================================
+   CONTACT
+   DARK GLASSMORPHISM
+========================================= */
+
+.contact-section {
+  position: relative;
+  width: 100%;
+  min-height: 760px;
+
+  padding: 120px 5vw;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background: #050505;
+  color: #ffffff;
+}
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.contact-bg-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(120px);
+
+  opacity: 0.25;
+}
+
+.contact-bg-glow-1 {
+  width: 500px;
+  height: 500px;
+  top: 0;
+  right: 5%;
+
+  background: rgba(82, 39, 255, 0.12);
+
+  filter: blur(140px);
+}
+
+.contact-bg-glow-2 {
+  width: 350px;
+  height: 350px;
+  bottom: -10%;
+  left: 10%;
+
+  background: rgba(168, 149, 255, 0.06);
+
+  filter: blur(140px);
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.contact-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   GLASS CARD
+========================================= */
+
+.contact-glass {
+  position: relative;
+  width: 100%;
+  min-height: 540px;
+  box-sizing: border-box;
+  padding: 70px;
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 32px;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 80px rgba(255, 255, 255, 0.015);
+}
+
+/* =========================================
+   GLASS INNER BORDER
+========================================= */
+
+.contact-glass::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 1px;
+
+  border-radius: 31px;
+
+  border: 1px solid rgba(255, 255, 255, 0.035);
+
+  pointer-events: none;
+}
+
+/* =========================================
+   CONTENT GRID
+========================================= */
+
+.contact-glass-inner {
+  position: relative;
+
+  z-index: 2;
+
+  min-height: 400px;
+
+  display: grid;
+
+  grid-template-columns: 1.3fr 0.7fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+/* =========================================
+   LABEL
+========================================= */
+
+.contact-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 30px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-label-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #a895ff;
+
+  box-shadow:
+    0 0 10px rgba(168, 149, 255, 0.8),
+    0 0 25px rgba(168, 149, 255, 0.3);
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.contact-title {
+  margin: 0;
+
+  font-size: clamp(55px, 7vw, 105px);
+
+  line-height: 0.88;
+
+  font-weight: 700;
+
+  letter-spacing: -0.065em;
+
+  color: #ffffff;
+}
+
+.contact-title span {
+  color: transparent;
+
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.42);
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.contact-description {
+  margin: 38px 0 32px;
+
+  max-width: 540px;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.48);
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.contact-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  min-width: 190px;
+
+  padding: 8px 9px 8px 23px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 100px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  backdrop-filter: blur(15px);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+
+  border-color: rgba(168, 149, 255, 0.5);
+
+  box-shadow: 0 0 30px rgba(82, 39, 255, 0.15);
+}
+
+.contact-button-arrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #050816;
+
+  font-size: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+}
+
+.arrow-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-button:hover .contact-button-arrow {
+  transform: rotate(45deg);
+}
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.contact-side {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 35px;
+}
+
+/* =========================================
+   MINI GLASS CARD
+========================================= */
+
+.contact-side-card {
+  padding: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.contact-side-label {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.contact-side-card h3 {
+  margin: 0;
+
+  font-size: 30px;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.04em;
+
+  font-weight: 600;
+}
+
+.contact-side-card p {
+  margin: 25px 0 0;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+.contact-links {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.contact-links a {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.5);
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition:
+    color 0.3s ease,
+    padding 0.3s ease;
+}
+
+.contact-links a:hover {
+  padding-left: 8px;
+
+  color: #ffffff;
+}
+
+.contact-links a span {
+  color: rgba(255, 255, 255, 0.3);
+
+  transition: transform 0.3s ease;
+}
+
+.contact-links a:hover span {
+  transform: translate(3px, -3px);
+
+  color: #a895ff;
+}
+
+/* =========================================
+   GLASS SHINE
+========================================= */
+
+.contact-glass-shine {
+  position: absolute;
+
+  top: -180px;
+  left: -100px;
+
+  width: 500px;
+  height: 350px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  transform: rotate(-25deg);
+
+  filter: blur(60px);
+
+  pointer-events: none;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 90px 20px;
+  }
+
+  .contact-glass {
+    padding: 50px 35px;
+  }
+
+  .contact-glass-inner {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .contact-side {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    min-height: auto;
+
+    padding: 80px 16px;
+  }
+
+  .contact-glass {
+    padding: 40px 24px;
+
+    border-radius: 24px;
+  }
+
+  .contact-glass::before {
+    border-radius: 23px;
+  }
+
+  .contact-title {
+    font-size: clamp(46px, 14vw, 70px);
+  }
+
+  .contact-description {
+    font-size: 14px;
+
+    margin: 30px 0;
+  }
+
+  .contact-description br {
+    display: none;
+  }
+
+  .contact-button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .contact-side-card {
+    padding: 24px;
+  }
+
+  .contact-side-card h3 {
+    font-size: 27px;
+  }
+}
