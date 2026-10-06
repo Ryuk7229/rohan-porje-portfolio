@@ -37,7 +37,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="about-section">
+    <section id="about" className="home-about-section">
       <div className="about-container">
         <div className="about-label">ABOUT ME</div>
 
@@ -50,22 +50,22 @@ const About = () => {
             </h2>
           </div>
 
-          <div className="about-content">
-            <p className="about-intro">
+          <div className="home-about-content">
+            <p className="home-about-intro">
               I’m Rohan Porje, a UI Developer and Creative Technologist who
               combines design thinking with frontend development to create
               digital experiences that are both visually engaging and
               technically refined.
             </p>
 
-            <p className="about-description">
+            <p className="home-about-description">
               My work sits at the intersection of UI/UX, visual design and
               frontend development. I enjoy transforming ideas, wireframes and
               designs into responsive, interactive and user-focused digital
               products.
             </p>
 
-            <div className="about-stats">
+            <div className="home-about-stats">
               <div className="stat">
                 <strong>6+</strong>
                 <span>Years Experience</span>
@@ -85,10 +85,8 @@ const About = () => {
         </div>
 
         <div className="about-cta">
-          {" "}
           <Link to="/about" className="about-cta-button">
-            {" "}
-            <span>MORE ABOUT ME</span>{" "}
+            <span>MORE ABOUT ME</span>
             <span className="arrow-icon">
               <svg
                 viewBox="0 0 16 16"
