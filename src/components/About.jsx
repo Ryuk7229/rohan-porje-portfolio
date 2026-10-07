@@ -68,7 +68,7 @@ const About = () => {
             <div className="home-about-stats">
               <div className="stat">
                 <strong>6+</strong>
-                <span>Years Experience</span>
+                <span>Years of Experience</span>
               </div>
 
               <div className="stat">

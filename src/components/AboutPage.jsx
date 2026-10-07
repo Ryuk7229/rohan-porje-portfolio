@@ -236,7 +236,7 @@ const AboutPage = () => {
       <section className="about-stats">
         <div className="stat-item">
           <strong>6+</strong>
-          <span>YEARS EXPERIENCE</span>
+          <span>YEARS OF EXPERIENCE</span>
         </div>
 
         <div className="stat-item">

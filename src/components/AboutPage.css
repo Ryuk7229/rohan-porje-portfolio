@@ -643,7 +643,7 @@
   .about-intro,
   .experience-section,
   .capabilities-section {
-    padding: 110px 0;
+    padding: 50px 0;
   }
 
   .about-intro-content {
@@ -659,9 +659,14 @@
   }
 
   .about-stats {
-    grid-template-rows: 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px 0;
     padding: 50px 0;
+  }
+
+  .about-stat {
+    width: 100%;
   }
 
   .stat-item:nth-child(2) {
@@ -727,7 +732,13 @@
 
 @media (max-width: 480px) {
   .about-stats {
-    grid-template-rows: 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 16px;
+  }
+
+  .about-stat {
+    width: 100%;
   }
 
   .stat-item,

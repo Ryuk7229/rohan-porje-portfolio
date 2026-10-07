@@ -505,6 +505,7 @@ use the dark background.
     aspect-ratio: 4 / 3;
 
     border-radius: 20px;
+    width: 100%;
   }
 
   .bento-card-content {
