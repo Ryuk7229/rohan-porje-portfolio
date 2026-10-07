@@ -1,12 +1,47 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./PillNav.css";
 
 const PillNav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const closeMenu = () => {
     setMenuOpen(false);
+  };
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    closeMenu();
+
+    // If already on homepage, scroll directly
+    if (window.location.pathname === "/") {
+      const contactSection = document.getElementById("contact");
+
+      if (contactSection) {
+        contactSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+
+      return;
+    }
+
+    // Navigate to homepage
+    navigate("/");
+
+    // Wait for Home + Contact to render
+    setTimeout(() => {
+      const contactSection = document.getElementById("contact");
+
+      if (contactSection) {
+        contactSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 200);
   };
 
   return (
@@ -19,10 +54,21 @@ const PillNav = () => {
 
         {/* Desktop Navigation */}
         <div className="pill-nav-links">
-          <a href="/#home">Home</a>
-          <a href="/about">About</a>
-          <a href="/projects">Work</a>
-          <a href="/#contact">Contact</a>
+          <Link to="/#home" onClick={closeMenu}>
+            Home
+          </Link>
+
+          <Link to="/about" onClick={closeMenu}>
+            About
+          </Link>
+
+          <Link to="/projects" onClick={closeMenu}>
+            Work
+          </Link>
+
+          <a href="/#contact" onClick={handleContactClick}>
+            Contact
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -40,19 +86,19 @@ const PillNav = () => {
 
       {/* Mobile Navigation */}
       <div className={`pill-mobile-menu ${menuOpen ? "open" : ""}`}>
-        <a href="/#home" onClick={closeMenu}>
+        <Link to="/#home" onClick={closeMenu}>
           Home
-        </a>
+        </Link>
 
-        <a href="/about" onClick={closeMenu}>
+        <Link to="/about" onClick={closeMenu}>
           About
-        </a>
+        </Link>
 
-        <a href="/projects" onClick={closeMenu}>
+        <Link to="/projects" onClick={closeMenu}>
           Work
-        </a>
+        </Link>
 
-        <a href="/#contact" onClick={closeMenu}>
+        <a href="/#contact" onClick={handleContactClick}>
           Contact
         </a>
       </div>

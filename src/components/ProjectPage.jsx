@@ -277,7 +277,7 @@ const ProjectPage = () => {
 
               <strong>{service}</strong>
 
-              <span className="project-service-arrow arrow-icon">
+              {/* <span className="project-service-arrow arrow-icon">
                 <svg
                   viewBox="0 0 16 16"
                   fill="none"
@@ -297,7 +297,7 @@ const ProjectPage = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </span>
+              </span> */}
             </div>
           ))}
         </div>
@@ -351,11 +351,11 @@ const ProjectPage = () => {
           FOOTER
       ====================================================== */}
 
-      <footer className="project-footer">
+      {/* <footer className="project-footer">
         <Link to="/">ROHAN PORJE</Link>
 
         <span>UI DEVELOPER · DESIGNER · CREATIVE TECHNOLOGIST</span>
-      </footer>
+      </footer> */}
     </main>
   );
 };
